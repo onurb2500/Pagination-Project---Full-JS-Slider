@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination Project</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="paginas">
+
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" id="point-one" name="pagination" class="point-one" checked>
+                <input type="radio" id="point-two" name="pagination" class="point-two">
+                <input type="radio" id="point-three" name="pagination" class="point-three">
+                <div class="slide first" id="pagina_um">
+                    <img src="assets/images/Online world-pana.svg" alt="Imagem de uma comunidade conectada mundialmente"
+                        class="pagina__img">
+                    <h3 class="pagina__heading">Plant lover Community</h3>
+                    <p class="pagina__paragraph">Find gardening enthusiasts from all over the world</p>
+                </div>
+
+                <div class="slide" id="pagina_dois">
+                    <img src="assets/images/In no time-pana.svg" alt="Imagem de um homem entregando um produto"
+                        class="pagina__img">
+                    <h3 class="pagina__heading">Get fast & safe delivery</h3>
+                    <p class="pagina__paragraph">Get good quality products for your plants </p>
+                </div>
+
+                <div class="slide" id="pagina_tres">
+                    <img src="assets/images/Ecommerce campaign-cuate.svg"
+                        alt="Imagem de uma mulher em frente a uma loja" class="pagina__img">
+                    <h3 class="pagina__heading">Buy & Sell Tools</h3>
+                    <p class="pagina__paragraph">Buy & sell good quality products for your beautiful plants</p>
+                </div>
+                <div class="label">
+                    <label for="point-one" id="point-one--label" class="point-one--label"></label>
+                    <label for="point-two" id="point-two--label" class="point-two--label"></label>
+                    <label for="point-three" id="point-three--label" class="point-three--label"></label>
+                </div>
+            </div>
+        </div>
+
+
+        <button id="botao" class="button">Continue</button>
+        <button id="skip" class="skip">Skip</button>
+
+        <script>
+
+            var botao = document.getElementById("botao");
+            var skip = document.getElementById("skip");
+            var point_one = document.getElementById("point-one");
+            var point_two = document.getElementById("point-two");
+            var point_three = document.getElementById("point-three");
+            var pagina_one = document.getElementById("pagina_um");
+            var pagina_two = document.getElementById("pagina_dois");
+            var pagina_three = document.getElementById("pagina_tres");
+            var get_started = document.getElementById("point-two");
+            var point_one_label = document.getElementById("point-one--label");
+            var point_two_label = document.getElementById("point-two--label");
+            var point_three_label = document.getElementById("point-three--label");
+
+            botao.addEventListener('click', function () {
+                if (point_one.checked == true) {
+                    point_two.checked = true;
+                    botao.innerHTML = "Continue";
+                    skip.style.display = "inline";
+                }
+                else if (point_two.checked == true) {
+                    point_three.checked = true;
+                    botao.innerHTML = "Get started";
+                    skip.style.display = "none";
+                }
+                else if (point_three.checked == true) {
+                    point_one.checked = true;
+                    botao.innerHTML = "Continue";
+                    skip.style.display = "inline";
+                }
+            });
+
+            skip.addEventListener('click', function () {
+                point_three.checked = true;
+                botao.innerHTML = "Get started";
+                skip.style.display = "none";
+            });
+
+            point_one.addEventListener('click', function () {
+                botao.innerHTML = "Continue";
+                skip.style.display = "inline";
+            });
+
+            point_two.addEventListener('click', function () {
+                botao.innerHTML = "Continue";
+                skip.style.display = "inline";
+            });
+
+            point_three.addEventListener('click', function () {
+                botao.innerHTML = "Get started";
+                skip.style.display = "none";
+            });
+
+            /*point_two.checked=true;*/
+        </script>
+    </section>
+</body>
+
+</html>

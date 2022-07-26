@@ -1,0 +1,129 @@
+:root {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.slider {
+    margin: 0 auto;
+    width: 300px;
+    height: 483px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 300%;
+    height: 407px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 33.33333%;
+    position: relative;
+    transition: 1s;
+}
+
+.slides img {
+    width: 300px;
+}
+
+#point-one:checked ~ .first {
+    margin-left: -0%;
+}
+
+#point-two:checked ~ .first {
+    margin-left: -33%;
+}
+
+#point-three:checked ~ .first {
+    margin-left: -66%;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 34px;
+}
+
+.pagina__heading {
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.pagina__paragraph {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 26px;
+    width: 300px;
+    text-align: center;
+}
+
+.label {
+    z-index: 1;
+    position: fixed;
+    top: 502px;
+    margin-left: 113px;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+}
+
+.label label {
+    width: 11px;
+    height: 11px;
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#point-one:checked ~ .label .point-one--label {
+    border: none;
+    background: #92E3A9;
+    width: 13px;
+    height: 13px;
+}
+
+#point-two:checked ~ .label .point-two--label {
+    border: none;
+    background: #92E3A9;
+    width: 13px;
+    height: 13px;
+}
+
+#point-three:checked ~ .label .point-three--label {
+    border: none;
+    background: #92E3A9;
+    width: 13px;
+    height: 13px;
+}
+
+.radio-buttons {
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+    width: 70px;
+    margin-top: 64px;
+}
+
+.button {
+    margin-top: 64px;
+    width: 308px;
+    height: 54px;
+    background: #92E3A9;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 10px #A1C3FC;
+    cursor: pointer;
+}
+
+.skip {
+    margin-top: 42px;
+    display: block;
+    color: #92E3A9;
+    cursor: pointer;
+}
